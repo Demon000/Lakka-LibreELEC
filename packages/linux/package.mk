@@ -22,9 +22,9 @@ case "$LINUX" in
     PKG_SOURCE_NAME="linux-$LINUX-$PKG_VERSION.tar.gz"
     ;;
   odroidgoA-4.4)
-    PKG_VERSION="fbfe5c30bf5643f44cc8c87c9b53b1ba2a0bfa49"
-    PKG_SHA256="ca4071dcd23a6c5b8051b814ec6bcf2a73e0569422156be143ac3f50df3f7d6b"
-    PKG_URL="https://github.com/hardkernel/linux/archive/$PKG_VERSION.tar.gz"
+    PKG_VERSION="3ed44c97e1ef"
+    # PKG_SHA256="1d7a6a65ea227d1cf47455b11e7d67a4de312613101586709435c45611aba84e"
+    PKG_URL="https://github.com/Demon000/linux/archive/$PKG_VERSION.tar.gz"
     PKG_SOURCE_NAME="linux-$LINUX-$PKG_VERSION.tar.gz"
     ;;
   raspberrypi)
