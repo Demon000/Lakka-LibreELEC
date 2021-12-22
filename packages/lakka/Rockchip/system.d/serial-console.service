@@ -1,7 +1,7 @@
 [Unit]
-Description=Debug Shell on /dev/console
+Description=Debug Shell on /dev/ttyFIQ0
 DefaultDependencies=no
-ConditionKernelCommandLine=console
+ConditionKernelCommandLine=console=ttyFIQ0
 
 [Service]
 WorkingDirectory=/storage
@@ -11,7 +11,7 @@ ExecStart=/bin/sh
 Restart=always
 RestartSec=0
 StandardInput=tty
-TTYPath=/dev/console
+TTYPath=/dev/ttyFIQ0
 TTYReset=yes
 TTYVHangup=yes
 KillMode=process
