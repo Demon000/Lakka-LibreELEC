@@ -27,7 +27,13 @@ if [ "$WIREGUARD_SUPPORT" = "yes" ]; then
   # Kernels 5.6 and above have support already in tree
   case $PROJECT in
     Allwinner | Amlogic | OdroidXU3 | Rockchip)
-      PKG_DEPENDS_TARGET+=" wireguard-linux-compat"
+      case $DEVICE in
+        OdroidGoAdvance)
+          ;;
+        *)
+          PKG_DEPENDS_TARGET+=" wireguard-linux-compat"
+          ;;
+      esac
       ;;
   esac
 fi
