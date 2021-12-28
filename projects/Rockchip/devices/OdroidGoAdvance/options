@@ -28,16 +28,17 @@
     KERNEL_MAKE_EXTRACMD=""
     KERNEL_MAKE_EXTRACMD+=" rockchip/rk3326-odroid-go2.dtb"
 
-  # Mali GPU family
-    MALI_FAMILY="g31"
-
   # kernel serial console
     function extra_cmdline() {
       EXTRA_CMDLINE="console=ttyFIQ0 console=tty0 net.iframes=0 ssh fbcon=rotate:3"
     }
-    
-  # Custom libmali package
-    OPENGLES="mali-odroidgo2"
+
+  # Mesa driver
+    GRAPHIC_DRIVERS="panfrost"
+
+  # Use mesa for OPENGLES and Vulkan
+    OPENGLES="mesa"
+    VULKAN="vulkan-loader"
 
   # Linux and U-Boot
     LINUX="mainline-5.16"
