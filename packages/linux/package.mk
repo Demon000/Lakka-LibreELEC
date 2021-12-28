@@ -49,6 +49,11 @@ case "$LINUX" in
     PKG_URL="https://www.kernel.org/pub/linux/kernel/v5.x/$PKG_NAME-$PKG_VERSION.tar.xz"
     PKG_PATCH_DIRS="default joycon dualsense"
     ;;
+  mainline-5.16)
+    PKG_VERSION="7ef384ec3fd8"
+    PKG_URL="https://github.com/Demon000/linux/archive/$PKG_VERSION.tar.gz"
+    PKG_PATCH_DIRS="default"
+    ;;
   L4T)
     PKG_VERSION=$DEVICE
     PKG_URL="l4t-kernel-sources"
