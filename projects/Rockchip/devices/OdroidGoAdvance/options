@@ -42,7 +42,7 @@
     OPENGLES="mali-odroidgo2"
 
   # Linux and U-Boot
-    LINUX="odroidgoA-4.4"
+    LINUX="mainline-5.16"
    
   # additional packages to install
     ADDITIONAL_PACKAGES+=" odroidgo2-utils odroidgoa-volkeys RTL8192EU"
