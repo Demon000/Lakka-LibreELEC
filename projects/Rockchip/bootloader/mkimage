@@ -28,7 +28,7 @@ cat << EOF > "${LE_TMP}/extlinux/$(basename ${dtb}).conf"
 LABEL ${DISTRO}
   LINUX /${KERNEL_NAME}
   FDT /$(basename ${dtb})
-  APPEND boot=UUID=${UUID_SYSTEM} disk=UUID=${UUID_STORAGE} quiet ${EXTRA_CMDLINE}
+  APPEND boot=UUID=${UUID_SYSTEM} disk=UUID=${UUID_STORAGE} ${EXTRA_CMDLINE}
 EOF
 
   [ -e "$dtb" ] && mcopy -o "$dtb" ::
