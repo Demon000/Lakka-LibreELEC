@@ -164,8 +164,8 @@ devices = \
     },
     'OdroidGoAdvance': {
       'odroidgo2': {
-        'dtb': 'rk3326-odroidgo2-linux.dtb',
-        'config': 'odroidgoa_defconfig'
+        'dtb': 'rk3326-odroid-go2.dtb',
+        'config': 'odroid-go2_defconfig'
       },
     },
     'RK3328': {

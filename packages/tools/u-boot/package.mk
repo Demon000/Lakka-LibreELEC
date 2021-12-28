@@ -24,9 +24,8 @@ case "$PROJECT" in
   Rockchip)
     case "$DEVICE" in
       OdroidGoAdvance)
-        PKG_VERSION="a1b59905a4554055f35196e17301bf83cbe41b5f"
-        PKG_SHA256="7cd65ce1729a204283a7c83f5a55aa500c38cc41e0acea8595981514cab77be9"
-        PKG_URL="https://github.com/hardkernel/u-boot/archive/$PKG_VERSION.tar.gz"
+        PKG_VERSION="2021.07"
+        PKG_URL="http://ftp.denx.de/pub/u-boot/u-boot-$PKG_VERSION.tar.bz2"
         PKG_PATCH_DIRS="odroidgoadvance"
         ;;
       *)
