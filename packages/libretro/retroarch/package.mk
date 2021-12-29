@@ -72,8 +72,7 @@ fi
 RETROARCH_GL=""
 
 if [ "$DEVICE" = "OdroidGoAdvance" ]; then
-  PKG_DEPENDS_TARGET+=" librga libpng"
-  RETROARCH_GL="--enable-kms --enable-odroidgo2 --disable-x11 --disable-wayland --enable-opengles --enable-opengles3 --enable-opengles3_2 --disable-mali_fbdev"
+  RETROARCH_GL="--disable-kms --disable-x11 --enable-wayland --enable-opengles --disable-mali_fbdev --enable-opengles3 --enable-vulkan"
 elif [ "$OPENGL_SUPPORT" = "yes" ]; then
   RETROARCH_GL="--enable-kms"
 elif [ "$OPENGLES" = "odroidc1-mali" ] || [ "$OPENGLES" = "opengl-meson" ] || [ "$OPENGLES" = "opengl-meson8" ] || [ "$OPENGLES" = "opengl-meson-t82x" ] || [ "$OPENGLES" = "allwinner-fb-mali" ]; then
@@ -295,7 +294,11 @@ makeinstall_target() {
   fi
 
   if [ "$DEVICE" = "OdroidGoAdvance" ]; then
+    echo "audio_out_rate = \"44100\"" >> $INSTALL/etc/retroarch.cfg
+    echo "video_driver = \"glcore\"" >> $INSTALL/etc/retroarch.cfg
+    sed -i -r -e's/^#*audio_driver[[:alnum:]\ =\"]+/audio_driver = \"alsa\"/g' $INSTALL/etc/retroarch.cfg
     echo "xmb_layout = 2" >> $INSTALL/etc/retroarch.cfg
+    echo "menu_shader_pipeline = \"1\""  >> $INSTALL/etc/retroarch.cfg
     echo "menu_widget_scale_auto = false" >> $INSTALL/etc/retroarch.cfg
     echo "menu_widget_scale_factor = 2.25" >> $INSTALL/etc/retroarch.cfg
   fi
