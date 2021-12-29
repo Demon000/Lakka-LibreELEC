@@ -267,7 +267,7 @@ elif [ "${BOOTLOADER}" = "u-boot" -a \( -n "${UBOOT_SYSTEM}" -o "${UBOOT_VERSION
 LABEL ${DISTRO}
   LINUX /${KERNEL_NAME}
   FDT /${DTB}
-  APPEND boot=UUID=${UUID_SYSTEM} disk=UUID=${UUID_STORAGE} quiet ${EXTRA_CMDLINE}
+  APPEND boot=UUID=${UUID_SYSTEM} disk=UUID=${UUID_STORAGE} ${EXTRA_CMDLINE}
 EOF
 
     mcopy -s "${LE_TMP}/extlinux" ::
