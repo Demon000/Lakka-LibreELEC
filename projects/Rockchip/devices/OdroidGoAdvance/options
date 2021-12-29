@@ -40,6 +40,9 @@
     OPENGLES="mesa"
     VULKAN="vulkan-loader"
 
+  # Weston
+    DISPLAYSERVER="weston"
+
   # Linux and U-Boot
     LINUX="mainline-5.16"
    
