@@ -48,7 +48,7 @@ if [ "${DISPLAYSERVER}" = "x11" ]; then
   export X11_INCLUDES=
   PKG_MESON_OPTS_TARGET+=" -Dplatforms=x11 -Ddri3=enabled -Dglx=dri -Dglvnd=true"
 elif [ "${DISPLAYSERVER}" = "weston" ]; then
-  PKG_DEPENDS_TARGET+=" wayland wayland-protocols"
+  PKG_DEPENDS_TARGET+=" wayland wayland-protocols libxshmfence"
   PKG_MESON_OPTS_TARGET+=" -Dplatforms=wayland -Ddri3=disabled -Dglx=disabled -Dglvnd=false"
 elif [ "${DISTRO}" = "Lakka" ]; then
   PKG_DEPENDS_TARGET+=" glproto dri2proto dri3proto presentproto xorgproto libXext libXdamage libXfixes libXxf86vm libxcb libX11 libxshmfence xrandr systemd openssl"
