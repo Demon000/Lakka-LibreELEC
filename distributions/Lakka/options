@@ -228,7 +228,6 @@ DISTRO_SRC="http://sources.libreelec.tv/$LIBREELEC_VERSION"
 " hatari "\
 " higan-sfc "\
 " higan-sfc-balanced "\
-" kronos "\
 " lowres-nx "\
 " lutro "\
 " mame2003-plus "\
@@ -311,7 +310,6 @@ DISTRO_SRC="http://sources.libreelec.tv/$LIBREELEC_VERSION"
       LIBRETRO_CORES="${LIBRETRO_CORES// genesis-plus-gx /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// higan-sfc-balanced /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// higan-sfc /}"
-      LIBRETRO_CORES="${LIBRETRO_CORES// kronos /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// mame2003-plus /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// mame2010 /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// mame2015 /}"
@@ -341,13 +339,6 @@ DISTRO_SRC="http://sources.libreelec.tv/$LIBREELEC_VERSION"
     LIBRETRO_CORES="${LIBRETRO_CORES// yabasanshiro /}"
   elif [ "$PROJECT" = "Generic" -a "$ARCH" = "i386" ]; then
     LIBRETRO_CORES="${LIBRETRO_CORES// openlara /}"
-  fi
-
-# disable kronos for specific platforms/targets
-  if [ "$PROJECT" = "Allwinner" -a "$DEVICE" = "A64"    ] || \
-     [ "$PROJECT" = "Allwinner" -a "$DEVICE" = "H3"     ] || \
-     [ "$PROJECT" = "Rockchip"  -a "$DEVICE" = "RK3328" ]; then
-    LIBRETRO_CORES="${LIBRETRO_CORES// kronos /}"
   fi
 
 # add platform specific cores
