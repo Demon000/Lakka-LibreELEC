@@ -30,7 +30,7 @@
 
   # kernel serial console
     function extra_cmdline() {
-      EXTRA_CMDLINE="console=ttyS2,115200 console=tty0 net.iframes=0 ssh fbcon=rotate:3"
+      EXTRA_CMDLINE="console=ttyS2,115200 console=tty0 net.iframes=0 ssh fbcon=rotate:3 mitigations=off"
     }
 
   # Mesa driver
