@@ -50,7 +50,7 @@ case "$LINUX" in
     PKG_PATCH_DIRS="default joycon dualsense"
     ;;
   mainline-5.16)
-    PKG_VERSION="3b1a762738f1"
+    PKG_VERSION="8380394ee9e9"
     PKG_URL="https://github.com/Demon000/linux/archive/$PKG_VERSION.tar.gz"
     PKG_PATCH_DIRS="default"
     ;;
