@@ -34,6 +34,8 @@ PKG_MESON_OPTS_TARGET="-Ddri-drivers=${DRI_DRIVERS// /,} \
                        -Dselinux=false \
                        -Dosmesa=false"
 
+PKG_MESON_OPTS_TARGET+=" --buildtype=release"
+
 if [ "${VULKAN_SUPPORT}" = "yes" ]; then
   PKG_DEPENDS_TARGET+=" ${VULKAN}"
   if [ "${DEVICE:0:4}" = "RPi4" ]; then
