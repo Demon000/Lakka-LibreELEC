@@ -47,7 +47,7 @@
     LINUX="mainline-5.16"
    
   # additional packages to install
-    ADDITIONAL_PACKAGES+=" odroidgo2-utils odroidgoa-volkeys RTL8192EU"
+    ADDITIONAL_PACKAGES+=" odroidgoa-sleep odroidgo2-utils odroidgoa-volkeys RTL8192EU"
 
   # Remove some broken drivers
     ADDITIONAL_DRIVERS="${ADDITIONAL_DRIVERS//RTL8192CU/}"
